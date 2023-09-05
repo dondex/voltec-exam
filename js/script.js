@@ -82,21 +82,36 @@ window.addEventListener("scroll", function () {
 
 /* Footer list toggle */
 $(document).ready(function () {
-  if ($(window).width() < 767.98) {
-    $(".toggle-btn-1").click(function () {
-      $(this).next(".dropdown-list").slideToggle(); // Toggle the list visibility
-    });
-
-    $(".toggle-btn-2").click(function () {
-      $(this).next(".dropdown-list").slideToggle(); // Toggle the list visibility
-    });
-
-    $(".toggle-btn-3").click(function () {
-      $(this).next(".dropdown-list").slideToggle(); // Toggle the list visibility
-    });
-
-    $(".toggle-btn-4").click(function () {
-      $(this).next(".dropdown-list").slideToggle(); // Toggle the list visibility
-    });
+  // Function to toggle the dropdown list
+  function toggleDropdown($button) {
+    $button.next(".dropdown-list").slideToggle();
   }
+
+  // Toggle Section 1
+  $(".toggle-btn-1").click(function () {
+    if ($(window).width() < 768) {
+      toggleDropdown($(this));
+    }
+  });
+
+  // Toggle Section 2
+  $(".toggle-btn-2").click(function () {
+    if ($(window).width() < 768) {
+      toggleDropdown($(this));
+    }
+  });
+
+  // Toggle Section 3
+  $(".toggle-btn-3").click(function () {
+    if ($(window).width() < 768) {
+      toggleDropdown($(this));
+    }
+  });
+
+  // Toggle Section 4
+  $(".toggle-btn-4").click(function () {
+    if ($(window).width() < 768) {
+      toggleDropdown($(this));
+    }
+  });
 });

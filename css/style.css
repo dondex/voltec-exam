@@ -30,10 +30,10 @@
   height: 100%;
   position: relative;
 }
-/* .carousel-control-prev,
+.carousel-control-prev,
 .carousel-control-next {
   display: none;
-} */
+}
 
 .w-100 {
   height: 100vh;
@@ -347,6 +347,15 @@
     font-size: 50px;
   }
 }
+
+/* Queries for 768px below */
+@media (max-width: 768px) {
+  .toggle-btn {
+    /* Disable buttons for screens less than or equal to 768px wide */
+    pointer-events: none;
+  }
+}
+
 /* Iphone Pro max 14 (430 x 932) */
 @media (max-width: 430.98px) {
   p {
@@ -483,6 +492,7 @@
     padding: 0 !important;
   }
   .btn-contact {
+    margin-top: 50px;
     margin-bottom: 50px;
   }
   .second-footer {
@@ -556,5 +566,11 @@
   /* News & Report Queries */
   .col-news-report-categ {
     margin-left: 10px;
+  }
+
+  /* Footer Queries */
+  .btn-contact {
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 }
