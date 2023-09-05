@@ -1,4 +1,27 @@
 /* Sticky Logo */
+$(document).ready(function () {
+  var logo = $("#logo-image");
+  var initialSrc = logo.attr("src");
+
+  // Set the scroll threshold at which you want to change the logo
+  var scrollThreshold = 100;
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > scrollThreshold) {
+      // Add the 'sticky' class to the logo
+      logo.addClass("sticky");
+
+      // Change the logo's src when scrolling
+      logo.attr("src", "./images/logo-dark-with-text.png"); // Replace with the path to your alternative logo
+    } else {
+      // Remove the 'sticky' class from the logo
+      logo.removeClass("sticky");
+
+      // Restore the original logo src
+      logo.attr("src", initialSrc);
+    }
+  });
+});
 
 /* Sidenav Sticky */
 window.addEventListener("scroll", function () {
